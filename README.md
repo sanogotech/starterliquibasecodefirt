@@ -2,6 +2,60 @@
 Starter liquidbase code first spring boot
 
 
+## Top 10 des Commandes Maven Liquibase
+
+1. **`liquibase:diff`**
+   - **Description :** Génère un fichier de changelog Liquibase à partir de la différence entre la base de données existante et les entités JPA/Hibernate.
+   - **Cas d'Utilisation :** Utile lorsque vous avez apporté des modifications à vos entités JPA et que vous souhaitez mettre à jour votre fichier de changelog.
+   - **Exemple :** `mvn liquibase:diff`
+
+2. **`liquibase:update`**
+   - **Description :** Applique tous les changements du fichier de changelog à la base de données.
+   - **Cas d'Utilisation :** Utilisé pour mettre à jour la base de données lors du déploiement d'une nouvelle version de l'application.
+   - **Exemple :** `mvn liquibase:update`
+
+3. **`liquibase:updateSQL`**
+   - **Description :** Génère le SQL des changements sans les exécuter. Utile pour vérifier les scripts SQL avant leur exécution.
+   - **Cas d'Utilisation :** Idéal pour examiner les modifications que Liquibase va apporter à la base de données.
+   - **Exemple :** `mvn liquibase:updateSQL`
+
+4. **`liquibase:rollback`**
+   - **Description :** Annule les changements non appliqués dans la base de données.
+   - **Cas d'Utilisation :** Permet de revenir en arrière en cas de problème après l'application de changements incorrects.
+   - **Exemple :** `mvn liquibase:rollback -Dliquibase.rollbackCount=1`
+
+5. **`liquibase:rollbackSQL`**
+   - **Description :** Génère le SQL pour annuler les derniers changements sans les appliquer.
+   - **Cas d'Utilisation :** Pour examiner les scripts SQL avant de réellement effectuer un rollback.
+   - **Exemple :** `mvn liquibase:rollbackSQL -Dliquibase.rollbackCount=1`
+
+6. **`liquibase:status`**
+   - **Description :** Affiche l'état actuel de la base de données par rapport au fichier de changelog.
+   - **Cas d'Utilisation :** Pour voir quels changements ont été appliqués et quels sont en attente.
+   - **Exemple :** `mvn liquibase:status`
+
+7. **`liquibase:validate`**
+   - **Description :** Valide le fichier de changelog par rapport à la base de données, vérifiant l'intégrité et la syntaxe.
+   - **Cas d'Utilisation :** Pour s'assurer que le fichier de changelog est correct avant de l'appliquer à la base de données.
+   - **Exemple :** `mvn liquibase:validate`
+
+8. **`liquibase:generateChangeLog`**
+   - **Description :** Génère un fichier de changelog Liquibase à partir de la base de données existante.
+   - **Cas d'Utilisation :** Pour initialiser un nouveau projet Liquibase en utilisant une base de données existante.
+   - **Exemple :** `mvn liquibase:generateChangeLog`
+
+9. **`liquibase:dropAll`**
+   - **Description :** Supprime tous les objets de la base de données (tables, vues, etc.).
+   - **Cas d'Utilisation :** Utilisé dans les scénarios de test ou pour nettoyer complètement la base de données.
+   - **Exemple :** `mvn liquibase:dropAll`
+
+10. **`liquibase:changelogSync`**
+    - **Description :** Marque tous les changements dans le fichier de changelog comme appliqués sans les exécuter.
+    - **Cas d'Utilisation :** Utile pour synchroniser l'état du fichier de changelog avec la base de données sans appliquer les modifications.
+    - **Exemple :** `mvn liquibase:changelogSync`
+
+N'oubliez pas de personnaliser les exemples en fonction de votre configuration et de vos besoins spécifiques dans votre projet. Ces commandes sont puissantes et doivent être utilisées avec précaution, en particulier dans les environnements de production.
+
 
 ## Résumé de la démarche Code First Liquibase
 

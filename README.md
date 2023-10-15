@@ -32,11 +32,11 @@ Ainsi, avec spring.jpa.hibernate.ddl-auto=none, les tables de votre base de donn
 properties
 
   ```properties
-# Configuration de la source de données
-spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.datasource.driver-class-name=org.postgresql.Driver
+# Configuration de la source de données H2 (base de données en mémoire)
+spring.datasource.url=jdbc:h2:file:./data/sampledb
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.datasource.driver-class-name=org.h2.Driver
 spring.jpa.hibernate.ddl-auto=none
 
 # Configuration de Liquibase
